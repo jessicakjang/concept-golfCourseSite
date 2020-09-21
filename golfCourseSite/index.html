@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Egret River Golf Course</title>
+        <link rel="stylesheet" href="/golfCourseSite/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Egret River Golf</h1>
+            <img alt="logo" src="#">
+
+            <!-- header links that will stick to top -->
+            <p>
+                <a href="tel:555-555-1234">555-555-1234</a> | 
+                <a href="https://www.google.com/maps">Directions</a> | 
+                <a href="https://twitter.com/"><img alt="twitter icon" src="#"></a> 
+                <a href="https://www.facebook.com/"><img alt="facebook icon" src="#"></a> 
+                <a href="https://www.instagram.com/"><img alt="instagram icon" src="#"></a> | 
+                <a href="#">Join our Rewards Club</a>
+            </p>
+
+            <!-- main nav menu -->
+            <!-- see tutorial: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp and  https://www.w3schools.com/howto/howto_css_menu_icon.asp for animated hamburger icon and full screen menu overlay --> 
+            <nav>
+                <ul>
+                    <a href="#">Book a Tee Time</a>
+                    <a href="#">Rates</a>
+                    <a href="#">Course Information</a>
+                    <a href="#">Driving Range</a>
+                    <a href="#">Lessons</a>
+                    <a href="#">Clubs</a>
+                    <a href="#">Events</a>
+                    <a href="#">Contact Us</a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="landing-page">
+
+                <!-- Quick links buttons on bottom of landing page -->
+                <div class="quick-links">
+                    <a href="#">Book a Tee Time</a>
+                    <a href="#">Rates</a>
+                    <a href="#">Course</a>
+                    <a href="#">Events</a>
+                    <a href="#">Contact</a>
+                </div>
+            </section>
+            <section class="updates">
+                <h2>COVID-19 Update</h2>
+                <p>We are Open!</p>
+                <p>Here's what you need to know to play safely:
+                    <ul>
+                        <li>Masks are required in and around the clubhouse.</li>
+                        <li>Single rider carts only (unless from same household).</li>
+                        <li>Credit card only or pay ahead online.</li>
+                        <li>Range reduced to 50% capacity.</li>
+                        <li>Cups set to reduce touch points. Flags remain in the holes.</li>
+                        <li>Food and beverage are to-go only.</li>
+                    </ul>
+                </p>
+            </section>
+            <section class="course">
+
+                <!-- Slideshow container -->
+                <!-- tutorial: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+                <div class="slideshow-container">
+
+                    <!-- Images with caption text -->
+                    <div>
+                        <img alt="golf course hole - sand bunker with trees in background" src="/golfCourseSite/images/carousel/1-amauri-cruz-unsplash-3000x2000.png">
+                        <div class="caption">View at Hole #3</div>
+                    </div>
+                    <div>
+                        <img alt="golf course hole - small pond and trees" src="/golfCourseSite/images/carousel/2-edewaa-foster-unsplash-3000x2000.png">
+                        <div class="caption">View at Hole #5</div>
+                    </div>
+                    <div>
+                        <img alt="aeriel view of two golf course holes" src="/golfCourseSite/images/carousel/3-ward-mercer-unsplash-3000x2000.png">
+                        <div class="caption">Aeriel View at Holes #8 and #9</div>
+                    </div>
+                    <div>
+                        <img alt="row of golf carts" src="/golfCourseSite/images/carousel/4-dean-unsplash-3000x2000.png">
+                        <div class="caption">Fleet of Golf Carts at Your Disposal</div>
+                    </div>
+                    <div>
+                        <img alt="golfer in lime green shirt swinging driver at golf course" src="/golfCourseSite/images/carousel/5-courtney-cook-unsplash-3000x2000.png">
+                        <div class="caption">Golfer in Action</div>
+                    </div>
+                    <div>
+                        <img alt="sand bunker at golf course hole" src="/golfCourseSite/images/carousel/6-edwin-compton-unsplash-3000x2000.png">
+                        <div class="caption">Sand Bunker at Hole #14</div>
+                    </div>
+                    <div>
+                        <img alt="aerial view of golf course hole and pond" src="/golfCourseSite/images/carousel/7-stephen-leonardi-unsplash-3000x2000.png">
+                        <div class="caption">View at Hole #17</div>
+                    </div>
+                    <div>
+                        <img alt="aeiral overhead view of golf course layout" src="/golfCourseSite/images/carousel/8-richard-brutyo-unsplash-3000x2000.png">
+                        <div class="caption">Aeriel View of Back 9 Holes</div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- bottom dots to show slideshow progress -->
+                <div>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                </div>
+
+                <!-- Course Information -->
+                <div class="course-info-box">
+                    <h2>Course</h2>
+                    <p>Our parkland course features native trees and lush grass. With spectacular landscape views, this course perfectly encapsulates the region. Egret River is laid over 180 acres with some of the area's best greens.</p>
+                    <p>Holes: 18 | Par: 72 | Yardage: 7,245</p>
+                    <button>Book a Tee Time</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <address>
+                1234 Golf Course Way<br>
+                Portland, Oregon 97200<br>
+                <a href="tel:555-555-1234">555-555-1234</a>
+            </address>
+            <a href="https://twitter.com/"><img alt="twitter icon" src="#"></a> 
+            <a href="https://www.facebook.com/"><img alt="facebook icon" src="#"></a> 
+            <a href="https://www.instagram.com/"><img alt="instagram icon" src="#"></a>
+        </footer>
+    </body>
+</html>
