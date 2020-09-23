@@ -1,3 +1,141 @@
+html {
+  background: #fafafa;
+  overflow-x: hidden; }
 
+.top-heading {
+  position: fixed;
+  z-index: 2; }
+  .top-heading header {
+    border: black solid;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20px;
+    width: 100vw;
+    margin: -10px -10px 0 -10px;
+    padding: 10px;
+    background: #03120e; }
+    .top-heading header p, .top-heading header a {
+      color: #fafafa; }
+    .top-heading header p {
+      padding: 20px 50px 20px 0; }
+      .top-heading header p a {
+        padding: 10px; }
+  .top-heading .title {
+    display: flex;
+    width: 100vw;
+    padding: 10px;
+    background: transparent; }
+    .top-heading .title img {
+      height: 125px;
+      padding: 0 25px;
+      border-radius: 50%; }
+    .top-heading .title .menu-btn {
+      text-decoration: none; }
+    .top-heading .title .openbtn {
+      display: block;
+      position: absolute;
+      top: 50px;
+      right: 100px;
+      font-size: 40px; }
+    .top-heading .title .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      background-color: black;
+      background-color: rgba(0, 0, 0, 0.9);
+      transition: 0.5s; }
+      .top-heading .title .overlay .closebtn {
+        position: relative;
+        top: 50px;
+        left: 50px;
+        padding: 20px;
+        font-size: 40px; }
+      .top-heading .title .overlay .overlay-content {
+        position: relative;
+        width: 60%;
+        text-align: center;
+        margin-top: 60px;
+        margin-left: 17.5%; }
+        .top-heading .title .overlay .overlay-content a {
+          padding: 8px;
+          text-decoration: none;
+          font-size: 36px;
+          color: #fafafa;
+          display: block;
+          transition: 0.3s; }
+          .top-heading .title .overlay .overlay-content a:hover, .top-heading .title .overlay .overlay-content a:focus {
+            color: #812c0e; }
+
+.landing-page {
+  height: 100vh;
+  margin: 0 -10px;
+  background-image: url(/golfCourseSite/images/landing-background/allie-romer-unsplash.jpg);
+  background-size: 100vw;
+  background-attachment: fixed; }
+  .landing-page .quick-links {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 7.5%;
+    bottom: 10%;
+    width: 85%; }
+    .landing-page .quick-links a {
+      flex-grow: 1;
+      position: relative;
+      padding: 25px 0;
+      text-align: center;
+      color: #fafafa;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 300ms ease-in-out; }
+      .landing-page .quick-links a:hover {
+        flex-grow: 2;
+        font-weight: 800; }
+      .landing-page .quick-links a::before {
+        content: "";
+        position: absolute;
+        border: solid #fafafa 4px;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        opacity: 0;
+        transition-duration: 0.2s;
+        transition-property: opacity; }
+      .landing-page .quick-links a:hover::before {
+        opacity: 1; }
+    .landing-page .quick-links .quick-book {
+      background: #3e5145; }
+    .landing-page .quick-links .quick-rates {
+      background: #471323; }
+    .landing-page .quick-links .quick-course {
+      background: #185062; }
+    .landing-page .quick-links .quick-events {
+      background: #29654c; }
+    .landing-page .quick-links .quick-contact {
+      background: #812c0e; }
+
+.updates {
+  border: black solid;
+  width: 80%;
+  margin: auto; }
+  .updates .updates-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .updates .updates-flex p {
+      border: blue solid; }
+    .updates .updates-flex li {
+      list-style: none;
+      padding: 0 0 10px 30px;
+      background-image: url(/golfCourseSite/icons/golf.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 25px; }
 
 /*# sourceMappingURL=style.css.map */

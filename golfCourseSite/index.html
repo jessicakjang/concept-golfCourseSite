@@ -4,62 +4,75 @@
         <meta charset="UTF-8">
         <title>Egret River Golf Course</title>
         <link rel="stylesheet" href="/golfCourseSite/style.css">
+        <script src="script.js"></script>
     </head>
     <body>
-        <header>
-            <h1>Egret River Golf</h1>
-            <img alt="logo" src="#">
+        <div class="top-heading">
+            <header>
+                <!-- header links that will stick to top -->
+                <p>
+                    <a href="tel:555-555-1234">555-555-1234</a> | 
+                    <a href="https://www.google.com/maps" target="_blank">Directions</a> | 
+                    <a href="https://twitter.com/"><img alt="twitter icon" src="#"></a> 
+                    <a href="https://www.facebook.com/"><img alt="facebook icon" src="#"></a> 
+                    <a href="https://www.instagram.com/"><img alt="instagram icon" src="#"></a> | 
+                    <a href="#">Join our Rewards Club</a>
+                </p>
+            </header>
 
-            <!-- header links that will stick to top -->
-            <p>
-                <a href="tel:555-555-1234">555-555-1234</a> | 
-                <a href="https://www.google.com/maps">Directions</a> | 
-                <a href="https://twitter.com/"><img alt="twitter icon" src="#"></a> 
-                <a href="https://www.facebook.com/"><img alt="facebook icon" src="#"></a> 
-                <a href="https://www.instagram.com/"><img alt="instagram icon" src="#"></a> | 
-                <a href="#">Join our Rewards Club</a>
-            </p>
-
-            <!-- main nav menu -->
-            <!-- see tutorial: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp and  https://www.w3schools.com/howto/howto_css_menu_icon.asp for animated hamburger icon and full screen menu overlay --> 
-            <nav>
-                <ul>
-                    <a href="#">Book a Tee Time</a>
-                    <a href="#">Rates</a>
-                    <a href="#">Course Information</a>
-                    <a href="#">Driving Range</a>
-                    <a href="#">Lessons</a>
-                    <a href="#">Clubs</a>
-                    <a href="#">Events</a>
-                    <a href="#">Contact Us</a>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="landing-page">
-
-                <!-- Quick links buttons on bottom of landing page -->
-                <div class="quick-links">
-                    <a href="#">Book a Tee Time</a>
-                    <a href="#">Rates</a>
-                    <a href="#">Course</a>
-                    <a href="#">Events</a>
-                    <a href="#">Contact</a>
+            <div class="title">
+                <img class="logo" alt="logo" src="/golfCourseSite/logo/egretRiver-logo-2.png">
+                <h1>Egret River Golf</h1>
+                
+                <!-- main nav menu -->
+                <!-- see tutorial: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp and  https://www.w3schools.com/howto/howto_css_menu_icon.asp for animated hamburger icon and full screen menu overlay --> 
+                <a href="javascript:void(0)" class="menu-btn openbtn" onclick="openNav()">Menu</a>
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="menu-btn closebtn" onclick="closeNav()">x</a>
+                    <nav>
+                        <ul class="overlay-content">
+                            <a href="#">Book a Tee Time</a>
+                            <a href="#">Rates</a>
+                            <a href="#">Course Information</a>
+                            <a href="#">Driving Range</a>
+                            <a href="#">Lessons</a>
+                            <a href="#">Clubs</a>
+                            <a href="#">Events</a>
+                            <a href="#">Contact Us</a>
+                        </ul>
+                    </nav>
                 </div>
-            </section>
+
+            </div>
+        </div>
+
+        <section class="landing-page">
+            <!-- Quick links buttons on bottom of landing page -->
+            <div class="quick-links">
+                <a class="quick-book grow" href="#">Book a Tee Time</a> 
+                <a class="quick-rates grow" href="#">Rates</a>
+                <a class="quick-course grow" href="#">Course</a>
+                <a class="quick-events grow" href="#">Events</a>
+                <a class="quick-contact grow" href="#">Contact</a>
+            </div>
+        </section>
+
+        <main>   
             <section class="updates">
                 <h2>COVID-19 Update</h2>
-                <p>We are Open!</p>
-                <p>Here's what you need to know to play safely:
-                    <ul>
-                        <li>Masks are required in and around the clubhouse.</li>
-                        <li>Single rider carts only (unless from same household).</li>
-                        <li>Credit card only or pay ahead online.</li>
-                        <li>Range reduced to 50% capacity.</li>
-                        <li>Cups set to reduce touch points. Flags remain in the holes.</li>
-                        <li>Food and beverage are to-go only.</li>
-                    </ul>
-                </p>
+                <div class="updates-flex">
+                    <p>We are Open!</p>
+                    <p>Here's what you need to know to play safely:
+                        <ul>
+                            <li>Masks are required in and around the clubhouse.</li>
+                            <li>Single rider carts only (unless from same household).</li>
+                            <li>Credit card only or pay ahead online.</li>
+                            <li>Range reduced to 50% capacity.</li>
+                            <li>Cups set to reduce touch points. Flags remain in the holes.</li>
+                            <li>Food and beverage are to-go only.</li>
+                        </ul>
+                    </p>
+                </div>
             </section>
             <section class="course">
 

@@ -1,1 +1,205 @@
-// sccs stylesheet
+// color palette
+$main-background: #fafafa;
+$text-color: #03120e;
+$button-1: #3e5145;
+$button-2: #471323;
+$button-3: #185062;
+$button-4: #29654c;
+$button-5: #812c0e;
+// $button-1: #098C9A;
+// $button-2: #785964;
+// $button-3: #847979;
+// $button-4: #89D1AC;
+// $button-5: #EFCB68;
+
+// global styles
+html {
+    background: $main-background;
+    overflow-x: hidden;
+}
+
+body {
+    
+}
+
+.top-heading {
+    position: fixed;
+    z-index: 2;
+
+    // header
+    header {
+        border: black solid;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 20px;
+        width: 100vw;
+        margin: -10px -10px 0 -10px;
+        padding: 10px;
+        background: $text-color;
+
+        p, a {
+            color: $main-background;
+        }
+
+        p {
+            padding: 20px 50px 20px 0;
+
+            a {
+                padding: 10px;
+            }
+        }
+
+    }
+
+    .title {
+        display: flex;
+        width: 100vw;
+        padding: 10px;
+        background: transparent;
+
+        img {
+            height: 125px;
+            padding: 0 25px;
+            border-radius: 50%;
+        }
+
+        .menu-btn {
+            text-decoration: none;
+        }
+
+        .openbtn {
+            display: block;
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            font-size: 40px;
+        }
+
+        .overlay{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 5;
+            top: 0;
+            right: 0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,.9);
+            transition: 0.5s;
+
+            .closebtn {
+                position: relative;
+                top: 50px;
+                left: 50px;
+                padding: 20px;
+                font-size: 40px;
+            }
+
+            .overlay-content {
+                position: relative;
+                // top: 35%;
+                width: 60%;
+                text-align: center;
+                margin-top: 60px;
+                margin-left: 17.5%;
+
+                a {
+                    padding: 8px;
+                    text-decoration: none;
+                    font-size: 36px;
+                    color: $main-background;
+                    display: block;
+                    transition: 0.3s;
+
+                    &:hover, &:focus { color: $button-5; }
+                }
+            }            
+        }
+    }
+}
+
+// landing page & title
+.landing-page {
+    height: 100vh;
+    margin: 0 -10px;
+    background-image: url(/golfCourseSite/images/landing-background/allie-romer-unsplash.jpg);
+    background-size: 100vw;
+    background-attachment: fixed;
+
+    
+
+    .quick-links {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        left: 7.5%;
+        bottom: 10%;
+        width: 85%;
+
+        a {
+            // border: black solid;
+            flex-grow: 1;
+            position: relative;
+            // width: 20%;
+            padding: 25px 0;
+            text-align: center;
+            color: $main-background;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+
+            &:hover { 
+                flex-grow: 2; 
+                font-weight: 800; 
+            }
+
+            $borderWidth: 4px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                border: solid $main-background $borderWidth;
+                top: $borderWidth;
+                left: $borderWidth;
+                right: $borderWidth;
+                bottom: $borderWidth;
+                opacity: 0;
+                transition-duration: 0.2s;
+                transition-property: opacity;
+            }
+
+            &:hover::before { opacity: 1; }
+        }
+
+        .quick-book { background: $button-1; ; }
+        .quick-rates { background: $button-2; }
+        .quick-course { background: $button-3; }
+        .quick-events { background: $button-4; }
+        .quick-contact { background: $button-5; }
+    }
+}
+
+.updates {
+    border: black solid;
+    width: 80%;
+    margin: auto;
+
+    .updates-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p { border: blue solid; }
+
+        li { 
+            list-style: none;
+            padding: 0 0 10px 30px;
+            background-image: url(/golfCourseSite/icons/golf.png);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 25px;
+        }
+        
+    }
+}
