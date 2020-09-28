@@ -152,8 +152,6 @@ h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Di
     background-size: 100vw;
     background-attachment: fixed;
 
-    
-
     .quick-links {
         display: flex;
         justify-content: space-around;
@@ -235,5 +233,95 @@ h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Di
             }
         }
         
+    }
+}
+
+.course {
+
+    // slideshow container
+    .slideshow-container {
+        max-width: 1500px;
+        position: relative;
+        margin: auto;
+
+        // hide the images by default
+        .slides {
+            display: none;
+
+            // number text
+            .numberText {
+                color: $main-background;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            // image 
+            img { max-width: 1500px; }
+
+            // caption text
+            .caption {
+                color: $main-background;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        // next and previous buttons
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: $main-background;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+
+            // on hover, add a slightly transparent background color
+            &:hover { background-color: $button-1-8; }
+        }
+
+        // position next button to the right 
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+    }
+
+    // dots/indicators
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: $main-background;
+        border: solid $text-color;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: $text-color;
+    }
+
+    // fading animation
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: 0.4}
+        to {opacity: 1}
     }
 }

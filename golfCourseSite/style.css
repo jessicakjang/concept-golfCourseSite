@@ -158,4 +158,64 @@ h1, h2, p, a, nav, ul, li, .caption, button, address {
         content: "\2192";
         padding-right: 10px; }
 
+.course .slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto; }
+  .course .slideshow-container .slides {
+    display: none; }
+    .course .slideshow-container .slides .numberText {
+      color: #fafafa;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0; }
+    .course .slideshow-container .slides img {
+      max-width: 1500px; }
+    .course .slideshow-container .slides .caption {
+      color: #fafafa;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center; }
+  .course .slideshow-container .prev, .course .slideshow-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fafafa;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0; }
+    .course .slideshow-container .prev:hover, .course .slideshow-container .next:hover {
+      background-color: rgba(62, 81, 69, 0.6); }
+  .course .slideshow-container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px; }
+.course .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fafafa;
+  border: solid #03120e;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; }
+.course .active, .course .dot:hover {
+  background-color: #03120e; }
+.course .fade {
+  animation-name: fade;
+  animation-duration: 1.5s; }
+@keyframes fade {
+  from {
+    opacity: 0.4; }
+  to {
+    opacity: 1; } }
+
 /*# sourceMappingURL=style.css.map */
