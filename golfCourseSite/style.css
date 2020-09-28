@@ -2,6 +2,9 @@ html {
   background: #fafafa;
   overflow-x: hidden; }
 
+h1, h2, p, a, nav, ul, li, .caption, button, address {
+  font-family: "Playfair Display", serif; }
+
 .top-heading {
   position: fixed;
   z-index: 2; }
@@ -20,7 +23,10 @@ html {
     .top-heading header p {
       padding: 20px 50px 20px 0; }
       .top-heading header p a {
-        padding: 10px; }
+        padding: 10px;
+        text-decoration: none; }
+        .top-heading header p a:hover {
+          text-decoration: underline; }
   .top-heading .title {
     display: flex;
     width: 100vw;
@@ -31,13 +37,20 @@ html {
       padding: 0 25px;
       border-radius: 50%; }
     .top-heading .title .menu-btn {
-      text-decoration: none; }
+      text-decoration: none;
+      padding: 20px; }
+      .top-heading .title .menu-btn:hover {
+        cursor: pointer; }
     .top-heading .title .openbtn {
-      display: block;
       position: absolute;
-      top: 50px;
-      right: 100px;
-      font-size: 40px; }
+      top: 30px;
+      right: 80px;
+      padding: 20px; }
+      .top-heading .title .openbtn .bar {
+        height: 5px;
+        width: 35px;
+        background: #03120e;
+        margin: 5px 0; }
     .top-heading .title .overlay {
       height: 100%;
       width: 0;
@@ -45,30 +58,39 @@ html {
       z-index: 5;
       top: 0;
       right: 0;
-      background-color: black;
-      background-color: rgba(0, 0, 0, 0.9);
-      transition: 0.5s; }
+      background-color: rgba(250, 250, 250, 0.6);
+      transition: 0.4s; }
+      .top-heading .title .overlay .overlay-background {
+        position: relative;
+        height: 100%;
+        background-color: #3e5145;
+        background-color: rgba(62, 81, 69, 0.6); }
       .top-heading .title .overlay .closebtn {
         position: relative;
-        top: 50px;
-        left: 50px;
-        padding: 20px;
+        z-index: 6;
+        top: 30px;
+        left: 65%;
         font-size: 40px; }
       .top-heading .title .overlay .overlay-content {
-        position: relative;
-        width: 60%;
+        position: absolute;
+        top: -20px;
+        right: -50px;
+        height: 100%;
+        width: 40%;
         text-align: center;
-        margin-top: 60px;
-        margin-left: 17.5%; }
+        padding-top: 100px;
+        background-color: #fafafa; }
         .top-heading .title .overlay .overlay-content a {
-          padding: 8px;
-          text-decoration: none;
-          font-size: 36px;
-          color: #fafafa;
           display: block;
-          transition: 0.3s; }
+          width: 50%;
+          padding: 15px;
+          margin-left: 20%;
+          font-size: 32px;
+          color: #03120e;
+          text-decoration: none; }
           .top-heading .title .overlay .overlay-content a:hover, .top-heading .title .overlay .overlay-content a:focus {
-            color: #812c0e; }
+            color: #fafafa;
+            background: #3e5145; }
 
 .landing-page {
   height: 100vh;
@@ -120,22 +142,20 @@ html {
       background: #812c0e; }
 
 .updates {
-  border: black solid;
-  width: 80%;
-  margin: auto; }
+  width: 70%;
+  margin: 100px auto; }
+  .updates h2 {
+    margin-bottom: 50px; }
   .updates .updates-flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    width: fit-content;
+    margin: auto; }
     .updates .updates-flex p {
-      border: blue solid; }
+      line-height: 0.5; }
     .updates .updates-flex li {
-      list-style: none;
-      padding: 0 0 10px 30px;
-      background-image: url(/golfCourseSite/icons/golf.png);
-      background-repeat: no-repeat;
-      background-position: left center;
-      background-size: 25px; }
+      padding: 0 0 10px 0;
+      list-style: none; }
+      .updates .updates-flex li::before {
+        content: "\2192";
+        padding-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */
