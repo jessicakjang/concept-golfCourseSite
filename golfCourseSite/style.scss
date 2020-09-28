@@ -58,14 +58,26 @@ h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Di
 
     .title {
         display: flex;
+        align-items: center;
         width: 100vw;
+        margin-left: -10px;
         padding: 10px;
-        background: transparent;
+        background-color: transparent;
+        transition: 0.6s ease;
+
+        #logo { transition: 0.4s ease; }
 
         img {
             height: 125px;
             padding: 0 25px;
             border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            transition: 0.4s ease;
         }
 
         .menu-btn {
@@ -113,6 +125,7 @@ h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Di
                 top: 30px;
                 left: 65%;
                 font-size: 40px;
+                color: $text-color;
             }
 
             .overlay-content {
@@ -240,9 +253,10 @@ h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Di
 
     // slideshow container
     .slideshow-container {
+        width: 70%;
         max-width: 1500px;
         position: relative;
-        margin: auto;
+        margin-left: 5%;
 
         // hide the images by default
         .slides {
@@ -250,25 +264,33 @@ h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Di
 
             // number text
             .numberText {
+                display: none;
                 color: $main-background;
                 font-size: 12px;
-                padding: 8px 12px;
+                padding: 5px 12px;
                 position: absolute;
-                top: 0;
+                right: 0;
+                bottom: 25px;
+                background-color: $button-1-8;
             }
 
             // image 
-            img { max-width: 1500px; }
+            img { 
+                width: 100%;
+                max-width: 1500px; }
 
             // caption text
             .caption {
-                color: $main-background;
-                font-size: 15px;
-                padding: 8px 12px;
                 position: absolute;
-                bottom: 8px;
-                width: 100%;
+                right: 0;
+                bottom: 30px;
+                width: fit-content;
+                padding: 8px 12px;
                 text-align: center;
+                font-size: 15px;
+                font-weight: 700;
+                color: $main-background;
+                background-color: $button-1-8;
             }
         }
 
@@ -277,7 +299,6 @@ h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Di
             cursor: pointer;
             position: absolute;
             top: 50%;
-            width: auto;
             margin-top: -22px;
             padding: 16px;
             color: $main-background;
@@ -298,13 +319,20 @@ h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Di
     }
 
     // dots/indicators
+    .dot-container {
+        margin: auto;
+        margin-top: -4px;
+        padding: 3px 0;
+        text-align: center;
+        background-color: $button-1-8;
+    }
     .dot {
         cursor: pointer;
-        height: 15px;
-        width: 15px;
+        height: 10px;
+        width: 10px;
         margin: 0 2px;
-        background-color: $main-background;
-        border: solid $text-color;
+        background-color: $button-1-8;
+        border: 2px solid $text-color;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;

@@ -21,9 +21,9 @@
                 </p>
             </header>
 
-            <div class="title">
-                <img class="logo" alt="logo" src="/golfCourseSite/logo/egretRiver-logo.png">
-                <h1>Egret River Golf</h1>
+            <div id="titlebar" class="title">
+                <a href="#top"><img id="logo" alt="logo" src="/golfCourseSite/logo/egretRiver-logo.png"></a>
+                <h1 id="title">Egret River Golf</h1>
                 
                 <!-- main nav menu -->
                 <!-- see tutorial: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp and  https://www.w3schools.com/howto/howto_css_menu_icon.asp for animated hamburger icon and full screen menu overlay --> 
@@ -132,11 +132,9 @@
                     <!-- Next and previous buttons -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                <br>
 
-                <!-- bottom dots to show slideshow progress -->
-                <div>
+                    <!-- bottom dots to show slideshow progress -->
+                <div class="dot-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
@@ -146,6 +144,9 @@
                     <span class="dot" onclick="currentSlide(7)"></span>
                     <span class="dot" onclick="currentSlide(8)"></span>
                 </div>
+
+                </div>
+                <br>
 
                 <!-- Course Information -->
                 <div class="course-info-box">

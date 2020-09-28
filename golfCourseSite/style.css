@@ -29,13 +29,23 @@ h1, h2, p, a, nav, ul, li, .caption, button, address {
           text-decoration: underline; }
   .top-heading .title {
     display: flex;
+    align-items: center;
     width: 100vw;
+    margin-left: -10px;
     padding: 10px;
-    background: transparent; }
+    background-color: transparent;
+    transition: 0.6s ease; }
+    .top-heading .title #logo {
+      transition: 0.4s ease; }
     .top-heading .title img {
       height: 125px;
       padding: 0 25px;
       border-radius: 50%; }
+    .top-heading .title h1 {
+      font-size: 3.5em;
+      text-transform: uppercase;
+      letter-spacing: 15px;
+      transition: 0.4s ease; }
     .top-heading .title .menu-btn {
       text-decoration: none;
       padding: 20px; }
@@ -70,7 +80,8 @@ h1, h2, p, a, nav, ul, li, .caption, button, address {
         z-index: 6;
         top: 30px;
         left: 65%;
-        font-size: 40px; }
+        font-size: 40px;
+        color: #03120e; }
       .top-heading .title .overlay .overlay-content {
         position: absolute;
         top: -20px;
@@ -159,32 +170,39 @@ h1, h2, p, a, nav, ul, li, .caption, button, address {
         padding-right: 10px; }
 
 .course .slideshow-container {
+  width: 70%;
   max-width: 1500px;
   position: relative;
-  margin: auto; }
+  margin-left: 5%; }
   .course .slideshow-container .slides {
     display: none; }
     .course .slideshow-container .slides .numberText {
+      display: none;
       color: #fafafa;
       font-size: 12px;
-      padding: 8px 12px;
+      padding: 5px 12px;
       position: absolute;
-      top: 0; }
+      right: 0;
+      bottom: 25px;
+      background-color: rgba(62, 81, 69, 0.6); }
     .course .slideshow-container .slides img {
+      width: 100%;
       max-width: 1500px; }
     .course .slideshow-container .slides .caption {
-      color: #fafafa;
-      font-size: 15px;
-      padding: 8px 12px;
       position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center; }
+      right: 0;
+      bottom: 30px;
+      width: fit-content;
+      padding: 8px 12px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 700;
+      color: #fafafa;
+      background-color: rgba(62, 81, 69, 0.6); }
   .course .slideshow-container .prev, .course .slideshow-container .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     margin-top: -22px;
     padding: 16px;
     color: #fafafa;
@@ -197,13 +215,19 @@ h1, h2, p, a, nav, ul, li, .caption, button, address {
   .course .slideshow-container .next {
     right: 0;
     border-radius: 3px 0 0 3px; }
+.course .dot-container {
+  margin: auto;
+  margin-top: -4px;
+  padding: 3px 0;
+  text-align: center;
+  background-color: rgba(62, 81, 69, 0.6); }
 .course .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
-  background-color: #fafafa;
-  border: solid #03120e;
+  background-color: rgba(62, 81, 69, 0.6);
+  border: 2px solid #03120e;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease; }
