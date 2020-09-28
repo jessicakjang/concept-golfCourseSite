@@ -30,6 +30,10 @@ h2 {
         text-decoration: none; }
         .top-heading header p a:hover {
           text-decoration: underline; }
+      .top-heading header p img {
+        width: 18px;
+        margin-top: 10px;
+        padding: 0; }
   .top-heading .title {
     display: flex;
     align-items: center;
@@ -173,7 +177,8 @@ h2 {
         padding-right: 10px; }
 
 .course {
-  display: flex; }
+  display: flex;
+  margin: 200px auto; }
   .course .slideshow-container {
     width: 70%;
     max-width: 1500px;
@@ -266,5 +271,29 @@ h2 {
         background-color: #fafafa;
         border: 5px solid #3e5145;
         border-radius: 5px; }
+
+#weather {
+  display: block;
+  width: 80%;
+  margin: 100px auto 200px auto;
+  box-shadow: 3px 3px 5px #03120e; }
+
+footer {
+  position: relative;
+  width: 90%;
+  margin: 300px auto 10px auto;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #3e5145; }
+  footer address {
+    line-height: 1.5;
+    font-size: 1em;
+    font-style: normal; }
+    footer address a {
+      color: #03120e;
+      text-decoration: none; }
+  footer img {
+    width: 30px;
+    padding: 15px 15px 0 15px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -54,6 +54,12 @@ h2 { font-size: 2em; }
 
                 &:hover { text-decoration: underline; }
             }
+
+            img { 
+                width: 18px; 
+                margin-top: 10px;
+                padding: 0;
+            }
         }
 
     }
@@ -253,6 +259,7 @@ h2 { font-size: 2em; }
 
 .course {
     display: flex;
+    margin: 200px auto;
 
     // slideshow container
     .slideshow-container {
@@ -388,3 +395,36 @@ h2 { font-size: 2em; }
     }
 }
 
+// weather widget
+#weather {
+    display: block;
+    width: 80%;
+    margin: 100px auto 200px auto;
+    box-shadow: 3px 3px 5px $text-color;
+}
+
+// footer
+footer {
+    position: relative;
+    width: 90%;
+    margin: 300px auto 10px auto;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid $button-1;
+
+    address {
+        line-height: 1.5;
+        font-size: 1em;
+        font-style: normal;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+        }
+    }
+
+    img {
+        width: 30px;
+        padding: 15px 15px 0 15px;
+    }
+}
