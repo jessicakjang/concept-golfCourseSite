@@ -2,7 +2,7 @@ html {
   background: #fafafa;
   overflow-x: hidden; }
 
-h1, h2, p, a, nav, ul, li, .caption, button, address {
+h1, h2, p, a, nav, ul, li, .caption, button, address, label, input {
   font-family: "Playfair Display", serif; }
 
 h2 {
@@ -34,6 +34,68 @@ h2 {
         width: 18px;
         margin-top: 10px;
         padding: 0; }
+    .top-heading header #join-btn {
+      cursor: pointer; }
+    .top-heading header #join-modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(62, 81, 69, 0.6); }
+      .top-heading header #join-modal .modal-content {
+        width: 70%;
+        padding: 20px;
+        margin: 10% auto;
+        border: 1px solid #03120e;
+        background-color: #fafafa; }
+        .top-heading header #join-modal .modal-content p {
+          width: fit-content;
+          padding: 10px 0;
+          margin: auto;
+          color: #03120e;
+          font-size: 1.5em;
+          text-align: center;
+          line-height: 1.25; }
+        .top-heading header #join-modal .modal-content #dont-miss-out {
+          margin-bottom: 30px; }
+        .top-heading header #join-modal .modal-content form {
+          display: flex;
+          flex-direction: column;
+          width: 40%;
+          margin: auto; }
+          .top-heading header #join-modal .modal-content form label {
+            padding: 15px 0 0 0; }
+          .top-heading header #join-modal .modal-content form input {
+            padding: 5px; }
+          .top-heading header #join-modal .modal-content form input[type="submit"] {
+            margin-top: 25px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: 2px solid #3e5145;
+            color: #fafafa;
+            background-color: #3e5145; }
+            .top-heading header #join-modal .modal-content form input[type="submit"]:hover, .top-heading header #join-modal .modal-content form input[type="submit"]:focus, .top-heading header #join-modal .modal-content form input[type="submit"]:active {
+              cursor: pointer;
+              color: #3e5145;
+              background-color: #fafafa; }
+        .top-heading header #join-modal .modal-content #required {
+          padding: 0;
+          margin-top: 5px;
+          margin-bottom: 20px;
+          width: 40%;
+          text-align: left;
+          font-size: 10px; }
+        .top-heading header #join-modal .modal-content #close-modal {
+          float: right;
+          color: #03120e;
+          font-size: 28px;
+          font-weight: bold; }
+          .top-heading header #join-modal .modal-content #close-modal:hover {
+            text-decoration: none;
+            cursor: pointer; }
   .top-heading .title {
     display: flex;
     align-items: center;

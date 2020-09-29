@@ -8,6 +8,28 @@ function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
 
+// get rewards modal
+var modal = document.getElementById("join-modal");
+// get the button that opens the modal
+var modalBtn = document.getElementById("join-btn");
+// get the span element that closes the modal
+var modalSpan = document.getElementById("close-modal");
+
+// when user clicks button, open modal
+modalBtn.onclick = function() {
+    modal.style.display = "block";
+}
+// when user clicks span ('x'), close the modal
+modalSpan.onclick = function() {
+    modal.style.display = "none";
+}
+// when user clicks anywhere outside of modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 // when user scrolls down, title section will resize
 window.onscroll = function() {scrollFunction()};
 

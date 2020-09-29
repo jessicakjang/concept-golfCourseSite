@@ -20,7 +20,7 @@ html {
     overflow-x: hidden;
 }
 
-h1, h2, p, a, nav, ul, li, .caption, button, address { font-family: "Playfair Display", serif; }
+h1, h2, p, a, nav, ul, li, .caption, button, address, label, input { font-family: "Playfair Display", serif; }
 
 h2 { font-size: 2em; }
 
@@ -59,6 +59,91 @@ h2 { font-size: 2em; }
                 width: 18px; 
                 margin-top: 10px;
                 padding: 0;
+            }
+        }
+
+        // rewards club modal
+        #join-btn { cursor: pointer; }
+
+        #join-modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $button-1-8;
+
+            .modal-content {
+                width: 70%;
+                padding: 20px;
+                margin: 10% auto;
+                border: 1px solid $text-color;
+                background-color: $main-background;
+
+                p {
+                    width: fit-content;
+                    padding: 10px 0;
+                    margin: auto;
+                    color: $text-color;
+                    font-size: 1.5em;
+                    text-align: center;
+                    line-height: 1.25;
+                }
+
+                #dont-miss-out { margin-bottom: 30px;}
+                
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 40%;
+                    margin: auto;
+
+                    label {
+                        padding: 15px 0 0 0;
+                    }
+
+                    input {
+                        padding: 5px;
+                    }
+
+                    input[type="submit"] {
+                        margin-top: 25px;
+                        font-size: 1.2em;
+                        border-radius: 5px;
+                        border: 2px solid $button-1;
+                        color: $main-background;
+                        background-color: $button-1;
+
+                        &:hover, &:focus, &:active {
+                            cursor: pointer;
+                            color: $button-1;
+                            background-color: $main-background;
+                        }
+                    }
+                }
+
+                #required {
+                    padding: 0;
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+                    width: 40%;
+                    text-align: left;
+                    font-size: 10px;
+                }
+
+                #close-modal {
+                    float: right;
+                    color: $text-color;
+                    font-size: 28px;
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
             }
         }
 
