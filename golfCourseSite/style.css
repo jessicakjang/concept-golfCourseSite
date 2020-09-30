@@ -177,7 +177,12 @@ h2 {
   margin: 0 -10px;
   background-image: url(/golfCourseSite/images/landing-background/allie-romer-unsplash.jpg);
   background-size: 100vw;
+  background-repeat: no-repeat;
   background-attachment: fixed; }
+  @media (max-width: 2000px) {
+    .landing-page {
+      position: relative;
+      height: 70vw; } }
   .landing-page .quick-links {
     display: flex;
     justify-content: space-around;
@@ -240,12 +245,22 @@ h2 {
 
 .course {
   display: flex;
-  margin: 200px auto; }
+  margin: 200px auto;
+  align-items: center; }
+  @media (max-width: 2000px) {
+    .course {
+      flex-direction: column-reverse;
+      margin: 5%; } }
   .course .slideshow-container {
     width: 70%;
     max-width: 1500px;
     position: relative;
     margin-left: 5%; }
+    @media (max-width: 2000px) {
+      .course .slideshow-container {
+        height: fit-content;
+        width: 95%;
+        margin: auto; } }
     .course .slideshow-container .slides {
       display: none; }
       .course .slideshow-container .slides img {
@@ -308,15 +323,25 @@ h2 {
     width: 20%;
     margin: auto 10px;
     padding: 0 20px; }
+    @media (max-width: 2000px) {
+      .course .course-info-box {
+        width: 80%; } }
     .course .course-info-box h2 {
       padding-bottom: 20px; }
     .course .course-info-box p {
       padding-bottom: 50px;
       text-align: justify;
       line-height: 1.5; }
+      @media (max-width: 2000px) {
+        .course .course-info-box p {
+          padding-bottom: 5%;
+          font-size: 1.25em; } }
     .course .course-info-box #stats {
       font-weight: 600;
       text-align: center; }
+      @media (max-width: 2000px) {
+        .course .course-info-box #stats {
+          font-size: 24px; } }
     .course .course-info-box button {
       display: block;
       margin: 40px auto;
@@ -327,6 +352,9 @@ h2 {
       color: #fafafa;
       background-color: #3e5145;
       transition: .2s ease; }
+      @media (max-width: 2000px) {
+        .course .course-info-box button {
+          margin-top: 5%; } }
       .course .course-info-box button:hover, .course .course-info-box button:focus, .course .course-info-box button:active {
         cursor: pointer;
         color: #3e5145;

@@ -8,6 +8,7 @@ $button-2: #471323;
 $button-3: #185062;
 $button-4: #29654c;
 $button-5: #812c0e;
+$breakpoint: 2000px;
 // $button-1: #098C9A;
 // $button-2: #785964;
 // $button-3: #847979;
@@ -256,7 +257,13 @@ h2 { font-size: 2em; }
     margin: 0 -10px;
     background-image: url(/golfCourseSite/images/landing-background/allie-romer-unsplash.jpg);
     background-size: 100vw;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+
+    @media (max-width: $breakpoint) {
+        position: relative;
+        height: 70vw;
+    }
 
     .quick-links {
         display: flex;
@@ -345,6 +352,12 @@ h2 { font-size: 2em; }
 .course {
     display: flex;
     margin: 200px auto;
+    align-items: center;
+
+    @media (max-width: $breakpoint) {
+        flex-direction: column-reverse;
+        margin: 5%;
+    }
 
     // slideshow container
     .slideshow-container {
@@ -352,6 +365,12 @@ h2 { font-size: 2em; }
         max-width: 1500px;
         position: relative;
         margin-left: 5%;
+
+        @media (max-width: $breakpoint) {
+            height: fit-content;
+            width: 95%;
+            margin: auto;
+        }
 
         // hide the images by default
         .slides {
@@ -437,11 +456,14 @@ h2 { font-size: 2em; }
 
     // course info box
     .course-info-box {
-        // border: blue solid;
         height: fit-content;
         width: 20%;
         margin: auto 10px;
         padding: 0 20px;
+
+        @media (max-width: $breakpoint) {
+            width: 80%;
+        }
 
         h2 {
             padding-bottom: 20px;
@@ -451,11 +473,20 @@ h2 { font-size: 2em; }
             padding-bottom: 50px;
             text-align: justify;
             line-height: 1.5;
+
+            @media (max-width: $breakpoint) {
+                padding-bottom: 5%;
+                font-size: 1.25em;
+            }
         }
 
         #stats { 
             font-weight: 600;
             text-align: center; 
+
+            @media (max-width: $breakpoint) {
+                font-size: 24px;
+            }
         }
 
         button {
@@ -468,6 +499,10 @@ h2 { font-size: 2em; }
             color: $main-background;
             background-color: $button-1;
             transition: .2s ease;
+
+            @media (max-width: $breakpoint) {
+                margin-top: 5%;
+            }
             
             &:hover, &:focus, &:active {
                 cursor: pointer;
@@ -513,3 +548,5 @@ footer {
         padding: 15px 15px 0 15px;
     }
 }
+
+
