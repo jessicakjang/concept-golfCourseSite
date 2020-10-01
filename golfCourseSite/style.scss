@@ -8,7 +8,8 @@ $button-2: #471323;
 $button-3: #185062;
 $button-4: #29654c;
 $button-5: #812c0e;
-$breakpoint: 2000px;
+$breakpoint: 1000px;
+$landing-breakpoint: 1300px;
 // $button-1: #098C9A;
 // $button-2: #785964;
 // $button-3: #847979;
@@ -159,12 +160,20 @@ h2 { font-size: 2em; }
         background-color: transparent;
         transition: 0.6s ease;
 
+        @media only screen and (max-width: $landing-breakpoint) {
+            flex-direction: column;
+        }
+
         #logo { transition: 0.4s ease; }
 
         img {
             height: 125px;
             padding: 0 25px;
             border-radius: 50%;
+
+            @media only screen and (max-width: $landing-breakpoint) {
+                padding: 10px 0 0 0;
+            }
         }
 
         h1 {
@@ -255,15 +264,10 @@ h2 { font-size: 2em; }
 .landing-page {
     height: 100vh;
     margin: 0 -10px;
-    background-image: url(/golfCourseSite/images/landing-background/allie-romer-unsplash.jpg);
+    background-image: url(/images/landing-background/allie-romer-unsplash.jpg);
     background-size: 100vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    @media (max-width: $breakpoint) {
-        position: relative;
-        height: 70vw;
-    }
 
     .quick-links {
         display: flex;
@@ -351,12 +355,12 @@ h2 { font-size: 2em; }
 
 .course {
     display: flex;
+    flex-direction: row;
     margin: 200px auto;
     align-items: center;
 
-    @media (max-width: $breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
         flex-direction: column-reverse;
-        margin: 5%;
     }
 
     // slideshow container
@@ -366,9 +370,8 @@ h2 { font-size: 2em; }
         position: relative;
         margin-left: 5%;
 
-        @media (max-width: $breakpoint) {
-            height: fit-content;
-            width: 95%;
+        @media only screen and (max-width: $breakpoint) {
+            width: 85%;
             margin: auto;
         }
 
@@ -461,7 +464,7 @@ h2 { font-size: 2em; }
         margin: auto 10px;
         padding: 0 20px;
 
-        @media (max-width: $breakpoint) {
+        @media only screen and (max-width: $breakpoint) {
             width: 80%;
         }
 
@@ -473,20 +476,11 @@ h2 { font-size: 2em; }
             padding-bottom: 50px;
             text-align: justify;
             line-height: 1.5;
-
-            @media (max-width: $breakpoint) {
-                padding-bottom: 5%;
-                font-size: 1.25em;
-            }
         }
 
         #stats { 
             font-weight: 600;
             text-align: center; 
-
-            @media (max-width: $breakpoint) {
-                font-size: 24px;
-            }
         }
 
         button {
@@ -499,10 +493,6 @@ h2 { font-size: 2em; }
             color: $main-background;
             background-color: $button-1;
             transition: .2s ease;
-
-            @media (max-width: $breakpoint) {
-                margin-top: 5%;
-            }
             
             &:hover, &:focus, &:active {
                 cursor: pointer;

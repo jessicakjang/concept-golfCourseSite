@@ -104,12 +104,18 @@ h2 {
     padding: 10px;
     background-color: transparent;
     transition: 0.6s ease; }
+    @media only screen and (max-width: 1300px) {
+      .top-heading .title {
+        flex-direction: column; } }
     .top-heading .title #logo {
       transition: 0.4s ease; }
     .top-heading .title img {
       height: 125px;
       padding: 0 25px;
       border-radius: 50%; }
+      @media only screen and (max-width: 1300px) {
+        .top-heading .title img {
+          padding: 10px 0 0 0; } }
     .top-heading .title h1 {
       font-size: 3.5em;
       text-transform: uppercase;
@@ -175,14 +181,10 @@ h2 {
 .landing-page {
   height: 100vh;
   margin: 0 -10px;
-  background-image: url(/golfCourseSite/images/landing-background/allie-romer-unsplash.jpg);
+  background-image: url(/images/landing-background/allie-romer-unsplash.jpg);
   background-size: 100vw;
   background-repeat: no-repeat;
   background-attachment: fixed; }
-  @media (max-width: 2000px) {
-    .landing-page {
-      position: relative;
-      height: 70vw; } }
   .landing-page .quick-links {
     display: flex;
     justify-content: space-around;
@@ -245,21 +247,20 @@ h2 {
 
 .course {
   display: flex;
+  flex-direction: row;
   margin: 200px auto;
   align-items: center; }
-  @media (max-width: 2000px) {
+  @media only screen and (max-width: 1000px) {
     .course {
-      flex-direction: column-reverse;
-      margin: 5%; } }
+      flex-direction: column-reverse; } }
   .course .slideshow-container {
     width: 70%;
     max-width: 1500px;
     position: relative;
     margin-left: 5%; }
-    @media (max-width: 2000px) {
+    @media only screen and (max-width: 1000px) {
       .course .slideshow-container {
-        height: fit-content;
-        width: 95%;
+        width: 85%;
         margin: auto; } }
     .course .slideshow-container .slides {
       display: none; }
@@ -323,7 +324,7 @@ h2 {
     width: 20%;
     margin: auto 10px;
     padding: 0 20px; }
-    @media (max-width: 2000px) {
+    @media only screen and (max-width: 1000px) {
       .course .course-info-box {
         width: 80%; } }
     .course .course-info-box h2 {
@@ -332,16 +333,9 @@ h2 {
       padding-bottom: 50px;
       text-align: justify;
       line-height: 1.5; }
-      @media (max-width: 2000px) {
-        .course .course-info-box p {
-          padding-bottom: 5%;
-          font-size: 1.25em; } }
     .course .course-info-box #stats {
       font-weight: 600;
       text-align: center; }
-      @media (max-width: 2000px) {
-        .course .course-info-box #stats {
-          font-size: 24px; } }
     .course .course-info-box button {
       display: block;
       margin: 40px auto;
@@ -352,9 +346,6 @@ h2 {
       color: #fafafa;
       background-color: #3e5145;
       transition: .2s ease; }
-      @media (max-width: 2000px) {
-        .course .course-info-box button {
-          margin-top: 5%; } }
       .course .course-info-box button:hover, .course .course-info-box button:focus, .course .course-info-box button:active {
         cursor: pointer;
         color: #3e5145;

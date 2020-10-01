@@ -37,7 +37,7 @@ function scrollFunction() {
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         // change title bar background and padding
         document.getElementById("titlebar").style.backgroundColor = "#fafafa";
-        document.getElementById("titlebar").style.padding = "0";
+        document.getElementById("titlebar").style.padding = "5px";
         // change logo size
         document.getElementById("logo").style.height = "70px";
         // change title/h1 size and letter spacing
