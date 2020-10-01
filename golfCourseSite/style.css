@@ -128,8 +128,8 @@ h2 {
         cursor: pointer; }
     .top-heading .title .openbtn {
       position: absolute;
-      top: 30px;
-      right: 80px;
+      top: 30%;
+      right: 8%;
       padding: 20px; }
       .top-heading .title .openbtn .bar {
         height: 5px;

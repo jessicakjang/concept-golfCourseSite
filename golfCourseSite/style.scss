@@ -10,11 +10,6 @@ $button-4: #29654c;
 $button-5: #812c0e;
 $breakpoint: 1000px;
 $landing-breakpoint: 1300px;
-// $button-1: #098C9A;
-// $button-2: #785964;
-// $button-3: #847979;
-// $button-4: #89D1AC;
-// $button-5: #EFCB68;
 
 // global styles
 html {
@@ -192,8 +187,8 @@ h2 { font-size: 2em; }
 
         .openbtn {
             position: absolute;
-            top: 30px;
-            right: 80px;
+            top: 30%;
+            right: 8%;
             padding: 20px;
 
             .bar {
