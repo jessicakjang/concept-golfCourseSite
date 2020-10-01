@@ -260,17 +260,9 @@ h2 { font-size: 2em; }
     }
 }
 
-// landing page & title
-.landing-page {
-    height: 100vh;
-    margin: 0 -10px;
-    background-image: url(/images/landing-background/allie-romer-unsplash.jpg);
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    .quick-links {
-        display: flex;
+// quick-links mixin
+@mixin quick-links() {
+    display: flex;
         justify-content: space-around;
         position: absolute;
         left: 7.5%;
@@ -317,6 +309,43 @@ h2 { font-size: 2em; }
         .quick-course { background: $button-3; }
         .quick-events { background: $button-4; }
         .quick-contact { background: $button-5; }
+}
+
+// desktop landing page
+.landing-page {
+    height: 100vh;
+    margin: 0 -10px;
+    background-image: url(/images/landing-background/allie-romer-unsplash.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @media only screen and (max-width: $landing-breakpoint) {
+        display: none;
+    }
+
+    .quick-links {
+        @include quick-links();
+    }
+}
+
+// mobile landing page
+.mobile-landing-page {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 -10px;
+    overflow-x: hidden;
+
+    @media only screen and (min-width: $landing-breakpoint) {
+        display: none;
+    }
+
+    img {
+        height: 100vh;
+    }
+
+    .mobile-quick-links {
+        @include quick-links();
     }
 }
 

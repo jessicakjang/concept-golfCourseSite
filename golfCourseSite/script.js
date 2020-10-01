@@ -34,27 +34,51 @@ window.onclick = function(event) {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        // change title bar background and padding
-        document.getElementById("titlebar").style.backgroundColor = "#fafafa";
-        document.getElementById("titlebar").style.padding = "5px";
-        // change logo size
-        document.getElementById("logo").style.height = "70px";
-        // change title/h1 size and letter spacing
-        document.getElementById("title").style.fontSize = "2em";
-        document.getElementById("title").style.letterSpacing = "10px";
-
-    } else { 
-        // change back title bar background and padding on scroll up
-        document.getElementById("titlebar").style.backgroundColor = "transparent";
-        document.getElementById("titlebar").style.padding = "10px";
-        // change back logo size on scroll up
-        document.getElementById("logo").style.height = "125px";
-        // change back title/h1 size and letter spacing on scroll up
-        document.getElementById("title").style.fontSize= "3.5em";
-        document.getElementById("title").style.letterSpacing = "15px";
-        
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth < 1300) {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            // change title bar background and padding
+            document.getElementById("titlebar").style.backgroundColor = "#fafafa";
+            document.getElementById("titlebar").style.padding = "5px";
+            // change logo size
+            document.getElementById("logo").style.height = "70px";
+            // change title/h1 size and letter spacing
+            document.getElementById("title").style.fontSize = "2em";
+            document.getElementById("title").style.letterSpacing = "10px";
+        } else {
+            // change back title bar background and padding on scroll up
+            document.getElementById("titlebar").style.backgroundColor = "transparent";
+            document.getElementById("titlebar").style.padding = "10px";
+            // change back logo size on scroll up
+            document.getElementById("logo").style.height = "125px";
+            // change back title/h1 size and letter spacing on scroll up
+            document.getElementById("title").style.fontSize= "3.5em";
+            document.getElementById("title").style.letterSpacing = "15px"; 
+        }
+    } else {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            // change title bar background and padding
+            document.getElementById("titlebar").style.backgroundColor = "#fafafa";
+            document.getElementById("titlebar").style.padding = "5px";
+            // change logo size
+            document.getElementById("logo").style.height = "70px";
+            // change title/h1 size and letter spacing
+            document.getElementById("title").style.fontSize = "2em";
+            document.getElementById("title").style.letterSpacing = "10px";
+    
+        } else { 
+            // change back title bar background and padding on scroll up
+            document.getElementById("titlebar").style.backgroundColor = "transparent";
+            document.getElementById("titlebar").style.padding = "10px";
+            // change back logo size on scroll up
+            document.getElementById("logo").style.height = "125px";
+            // change back title/h1 size and letter spacing on scroll up
+            document.getElementById("title").style.fontSize= "3.5em";
+            document.getElementById("title").style.letterSpacing = "15px"; 
+        }
     }
+
+    
 }
 
 // image slideshow 

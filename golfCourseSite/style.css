@@ -185,6 +185,9 @@ h2 {
   background-size: 100vw;
   background-repeat: no-repeat;
   background-attachment: fixed; }
+  @media only screen and (max-width: 1300px) {
+    .landing-page {
+      display: none; } }
   .landing-page .quick-links {
     display: flex;
     justify-content: space-around;
@@ -226,6 +229,59 @@ h2 {
     .landing-page .quick-links .quick-events {
       background: #29654c; }
     .landing-page .quick-links .quick-contact {
+      background: #812c0e; }
+
+.mobile-landing-page {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 -10px;
+  overflow-x: hidden; }
+  @media only screen and (min-width: 1300px) {
+    .mobile-landing-page {
+      display: none; } }
+  .mobile-landing-page img {
+    height: 100vh; }
+  .mobile-landing-page .mobile-quick-links {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 7.5%;
+    bottom: 10%;
+    width: 85%; }
+    .mobile-landing-page .mobile-quick-links a {
+      flex-grow: 1;
+      position: relative;
+      padding: 25px 0;
+      text-align: center;
+      color: #fafafa;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 300ms ease-in-out; }
+      .mobile-landing-page .mobile-quick-links a:hover {
+        flex-grow: 2;
+        font-weight: 800; }
+      .mobile-landing-page .mobile-quick-links a::before {
+        content: "";
+        position: absolute;
+        border: solid #fafafa 4px;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        opacity: 0;
+        transition-duration: 0.2s;
+        transition-property: opacity; }
+      .mobile-landing-page .mobile-quick-links a:hover::before {
+        opacity: 1; }
+    .mobile-landing-page .mobile-quick-links .quick-book {
+      background: #3e5145; }
+    .mobile-landing-page .mobile-quick-links .quick-rates {
+      background: #471323; }
+    .mobile-landing-page .mobile-quick-links .quick-course {
+      background: #185062; }
+    .mobile-landing-page .mobile-quick-links .quick-events {
+      background: #29654c; }
+    .mobile-landing-page .mobile-quick-links .quick-contact {
       background: #812c0e; }
 
 .updates {
