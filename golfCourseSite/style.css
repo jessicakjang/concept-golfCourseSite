@@ -12,7 +12,6 @@ h2 {
   position: fixed;
   z-index: 2; }
   .top-heading header {
-    border: black solid;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -166,6 +165,10 @@ h2 {
         text-align: center;
         padding-top: 100px;
         background-color: #fafafa; }
+        .top-heading .title .overlay .overlay-content li {
+          list-style-type: none;
+          margin: 0;
+          padding: 0; }
         .top-heading .title .overlay .overlay-content a {
           display: block;
           width: 50%;
@@ -198,15 +201,15 @@ h2 {
     .landing-page .quick-links a {
       flex-grow: 1;
       position: relative;
-      padding: 25px 0;
+      padding: 20px 0;
       text-align: center;
       color: #fafafa;
+      font-size: 1.35em;
       text-transform: uppercase;
       text-decoration: none;
       transition: all 300ms ease-in-out; }
       .landing-page .quick-links a:hover {
-        flex-grow: 2;
-        font-weight: 800; }
+        flex-grow: 1.4; }
       .landing-page .quick-links a::before {
         content: "";
         position: absolute;
@@ -251,15 +254,15 @@ h2 {
     .mobile-landing-page .mobile-quick-links a {
       flex-grow: 1;
       position: relative;
-      padding: 25px 0;
+      padding: 20px 0;
       text-align: center;
       color: #fafafa;
+      font-size: 1.35em;
       text-transform: uppercase;
       text-decoration: none;
       transition: all 300ms ease-in-out; }
       .mobile-landing-page .mobile-quick-links a:hover {
-        flex-grow: 2;
-        font-weight: 800; }
+        flex-grow: 1.4; }
       .mobile-landing-page .mobile-quick-links a::before {
         content: "";
         position: absolute;
@@ -284,27 +287,10 @@ h2 {
     .mobile-landing-page .mobile-quick-links .quick-contact {
       background: #812c0e; }
 
-.updates {
-  width: 70%;
-  margin: 100px auto; }
-  .updates h2 {
-    margin-bottom: 50px; }
-  .updates .updates-flex {
-    width: fit-content;
-    margin: auto; }
-    .updates .updates-flex p {
-      line-height: 0.5; }
-    .updates .updates-flex li {
-      padding: 0 0 10px 0;
-      list-style: none; }
-      .updates .updates-flex li::before {
-        content: "\2192";
-        padding-right: 10px; }
-
 .course {
   display: flex;
   flex-direction: row;
-  margin: 200px auto;
+  margin: 10% auto;
   align-items: center; }
   @media only screen and (max-width: 1000px) {
     .course {
@@ -412,13 +398,16 @@ h2 {
 #weather {
   display: block;
   width: 80%;
-  margin: 100px auto 200px auto;
+  margin: 15% auto;
   box-shadow: 3px 3px 5px #03120e; }
+  @media only screen and (max-width: 1000px) {
+    #weather {
+      width: 50%; } }
 
 footer {
   position: relative;
   width: 90%;
-  margin: 300px auto 10px auto;
+  margin: 10% auto 10px auto;
   padding: 10px;
   text-align: center;
   border-top: 1px solid #3e5145; }

@@ -1,9 +1,9 @@
 // color palette
 $main-background: #fafafa;
-$main-background-8: rgba(250, 250, 250, 0.6);
+$main-background-rgba: rgba(250, 250, 250, 0.6);
 $text-color: #03120e;
 $button-1: #3e5145;
-$button-1-8: rgba(62, 81, 69, 0.6);
+$button-1-rgba: rgba(62, 81, 69, 0.6);
 $button-2: #471323;
 $button-3: #185062;
 $button-4: #29654c;
@@ -21,14 +21,13 @@ h1, h2, p, a, nav, ul, li, .caption, button, address, label, input { font-family
 
 h2 { font-size: 2em; }
 
-
+// top heading section including top fixed contact bar, logo, h1, menu
 .top-heading {
     position: fixed;
     z-index: 2;
 
-    // header
+    // header - contact links and rewards club
     header {
-        border: black solid;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -38,9 +37,7 @@ h2 { font-size: 2em; }
         padding: 10px;
         background: $text-color;
 
-        p, a {
-            color: $main-background;
-        }
+        p, a { color: $main-background; }
 
         p {
             padding: 20px 50px 20px 0;
@@ -52,6 +49,7 @@ h2 { font-size: 2em; }
                 &:hover { text-decoration: underline; }
             }
 
+            // social link img
             img { 
                 width: 18px; 
                 margin-top: 10px;
@@ -70,7 +68,7 @@ h2 { font-size: 2em; }
             left: 0;
             height: 100%;
             width: 100%;
-            background-color: $button-1-8;
+            background-color: $button-1-rgba;
 
             .modal-content {
                 width: 70%;
@@ -97,13 +95,9 @@ h2 { font-size: 2em; }
                     width: 40%;
                     margin: auto;
 
-                    label {
-                        padding: 15px 0 0 0;
-                    }
+                    label { padding: 15px 0 0 0; }
 
-                    input {
-                        padding: 5px;
-                    }
+                    input { padding: 5px; }
 
                     input[type="submit"] {
                         margin-top: 25px;
@@ -146,6 +140,7 @@ h2 { font-size: 2em; }
 
     }
 
+    // logo, h1, menu
     .title {
         display: flex;
         align-items: center;
@@ -155,9 +150,8 @@ h2 { font-size: 2em; }
         background-color: transparent;
         transition: 0.6s ease;
 
-        @media only screen and (max-width: $landing-breakpoint) {
-            flex-direction: column;
-        }
+        // change flex-direction to stack logo & h1 for tablet/mobile
+        @media only screen and (max-width: $landing-breakpoint) { flex-direction: column; }
 
         #logo { transition: 0.4s ease; }
 
@@ -166,9 +160,8 @@ h2 { font-size: 2em; }
             padding: 0 25px;
             border-radius: 50%;
 
-            @media only screen and (max-width: $landing-breakpoint) {
-                padding: 10px 0 0 0;
-            }
+            // reduce padding for tablet/mobile
+            @media only screen and (max-width: $landing-breakpoint) { padding: 10px 0 0 0; }
         }
 
         h1 {
@@ -206,7 +199,7 @@ h2 { font-size: 2em; }
             z-index: 5;
             top: 0;
             right: 0;
-            background-color: $main-background-8;
+            background-color: $main-background-rgba;
             transition: 0.4s;
 
 
@@ -214,7 +207,7 @@ h2 { font-size: 2em; }
                 position: relative;
                 height: 100%;
                 background-color: $button-1;
-                background-color: $button-1-8;
+                background-color: $button-1-rgba;
             }
 
             .closebtn {
@@ -235,6 +228,12 @@ h2 { font-size: 2em; }
                 text-align: center;
                 padding-top: 100px;
                 background-color: $main-background;
+
+                li { 
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                 }
 
                 a {
                     display: block;
@@ -265,21 +264,17 @@ h2 { font-size: 2em; }
         width: 85%;
 
         a {
-            // border: black solid;
             flex-grow: 1;
             position: relative;
-            // width: 20%;
-            padding: 25px 0;
+            padding: 20px 0;
             text-align: center;
             color: $main-background;
+            font-size: 1.35em;
             text-transform: uppercase;
             text-decoration: none;
             transition: all 300ms ease-in-out;
 
-            &:hover { 
-                flex-grow: 2; 
-                font-weight: 800; 
-            }
+            &:hover { flex-grow: 1.4; }
 
             $borderWidth: 4px;
 
@@ -306,7 +301,7 @@ h2 { font-size: 2em; }
         .quick-contact { background: $button-5; }
 }
 
-// desktop landing page
+// landing page - desktop version
 .landing-page {
     height: 100vh;
     margin: 0 -10px;
@@ -315,77 +310,34 @@ h2 { font-size: 2em; }
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    @media only screen and (max-width: $landing-breakpoint) {
-        display: none;
-    }
+    @media only screen and (max-width: $landing-breakpoint) { display: none; }
 
-    .quick-links {
-        @include quick-links();
-    }
+    .quick-links { @include quick-links(); }
 }
 
-// mobile landing page
+// landing page - mobile/tablet version
 .mobile-landing-page {
     height: 100vh;
     width: 100vw;
     margin: 0 -10px;
     overflow-x: hidden;
 
-    @media only screen and (min-width: $landing-breakpoint) {
-        display: none;
-    }
+    @media only screen and (min-width: $landing-breakpoint) { display: none; }
 
-    img {
-        height: 100vh;
-    }
+    img { height: 100vh; }
 
-    .mobile-quick-links {
-        @include quick-links();
-    }
+    .mobile-quick-links { @include quick-links(); }
 }
 
-.updates {
-    width: 70%;
-    margin: 100px auto;
-
-    h2 {
-        margin-bottom: 50px;
-    }
-
-    .updates-flex {
-        width: fit-content;
-        margin: auto;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-
-        p { 
-            line-height: 0.5;
-        }
-
-        li { 
-            padding: 0 0 10px 0;
-            list-style: none; 
-            
-            &::before {
-                content: "\2192";
-                padding-right: 10px;
-            }
-        }
-        
-    }
-}
-
+// course info section - image slideshow and course info description box
 .course {
     display: flex;
     flex-direction: row;
-    margin: 200px auto;
+    margin: 10% auto;
     align-items: center;
 
-    @media only screen and (max-width: $breakpoint) {
-        flex-direction: column-reverse;
-    }
+    // stack course info description box and image slideshow for mobile
+    @media only screen and (max-width: $breakpoint) { flex-direction: column-reverse; }
 
     // slideshow container
     .slideshow-container {
@@ -394,6 +346,7 @@ h2 { font-size: 2em; }
         position: relative;
         margin-left: 5%;
 
+        // change relative size of slideshow for mobile
         @media only screen and (max-width: $breakpoint) {
             width: 85%;
             margin: auto;
@@ -403,7 +356,7 @@ h2 { font-size: 2em; }
         .slides {
             display: none;
 
-            // image 
+            // images
             img { 
                 width: 100%;
                 max-width: 1500px; }
@@ -418,7 +371,7 @@ h2 { font-size: 2em; }
                 text-align: center;
                 font-size: 15px;
                 color: $main-background;
-                background-color: $button-1-8;
+                background-color: $button-1-rgba;
             }
         }
 
@@ -436,7 +389,7 @@ h2 { font-size: 2em; }
             border-radius: 0 3px 3px 0;
 
             // on hover, add a slightly transparent background color
-            &:hover { background-color: $button-1-8; }
+            &:hover { background-color: $button-1-rgba; }
         }
 
         // position next button to the right 
@@ -451,14 +404,15 @@ h2 { font-size: 2em; }
             margin-top: -4px;
             padding: 3px 0;
             text-align: center;
-            background-color: $button-1-8;
+            background-color: $button-1-rgba;
         }
+
         .dot {
             cursor: pointer;
             height: 10px;
             width: 10px;
             margin: 0 2px;
-            background-color: $button-1-8;
+            background-color: $button-1-rgba;
             border: 2px solid $text-color;
             border-radius: 50%;
             display: inline-block;
@@ -481,20 +435,19 @@ h2 { font-size: 2em; }
         }
     }
 
-    // course info box
+    // course info description box
     .course-info-box {
         height: fit-content;
         width: 20%;
         margin: auto 10px;
         padding: 0 20px;
 
+        // change relative size of course info description for mobile
         @media only screen and (max-width: $breakpoint) {
             width: 80%;
         }
 
-        h2 {
-            padding-bottom: 20px;
-        }
+        h2 { padding-bottom: 20px; }
 
         p {
             padding-bottom: 50px;
@@ -507,6 +460,7 @@ h2 { font-size: 2em; }
             text-align: center; 
         }
 
+        // book tee time button
         button {
             display: block;
             margin: 40px auto;
@@ -533,15 +487,17 @@ h2 { font-size: 2em; }
 #weather {
     display: block;
     width: 80%;
-    margin: 100px auto 200px auto;
+    margin: 15% auto;
     box-shadow: 3px 3px 5px $text-color;
+
+    @media only screen and (max-width: $breakpoint) { width: 50%; }
 }
 
 // footer
 footer {
     position: relative;
     width: 90%;
-    margin: 300px auto 10px auto;
+    margin: 10% auto 10px auto;
     padding: 10px;
     text-align: center;
     border-top: 1px solid $button-1;
@@ -557,10 +513,9 @@ footer {
         }
     }
 
+    // social links img
     img {
         width: 30px;
         padding: 15px 15px 0 15px;
     }
 }
-
-

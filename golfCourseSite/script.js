@@ -1,3 +1,4 @@
+// MAIN MENU FUNCTIONING
 // open menu overlay
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
@@ -8,6 +9,7 @@ function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
 
+// REWARDS CLUB MODAL FUNCTIONING
 // get rewards modal
 var modal = document.getElementById("join-modal");
 // get the button that opens the modal
@@ -30,10 +32,12 @@ window.onclick = function(event) {
     }
 }
 
+// HEADER RESIZING & TRANSFORMATIONS ON SCROLL DOWN 
 // when user scrolls down, title section will resize
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+    // scrollFunction() for mobile/tablet scrolling
     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     if (viewportWidth < 1300) {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -56,6 +60,7 @@ function scrollFunction() {
             document.getElementById("title").style.letterSpacing = "15px"; 
         }
     } else {
+        // scrollFunction() for desktop scrolling
         if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
             // change title bar background and padding
             document.getElementById("titlebar").style.backgroundColor = "#fafafa";
@@ -77,10 +82,9 @@ function scrollFunction() {
             document.getElementById("title").style.letterSpacing = "15px"; 
         }
     }
-
-    
 }
 
+// IMAGE SLIDESHOW FUNCTIONING
 // image slideshow 
 var slideIndex = 1;
 showSlides(slideIndex);
